@@ -3,6 +3,8 @@
 Deploy Grafana Tempo on railway with one click.
 Grafana Tempo is a high-performance, scalable, and easy-to-operate distributed tracing solution. It is designed to be compatible with the most popular tracing protocols and offers seamless integration with other tools in the Grafana ecosystem, enabling efficient visualization and analysis of distributed tracing data.
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/qtu0ha?referralCode=9uHSFr)
+
 ## ✨ Features
 
 * Distributed tracing with high scalability
