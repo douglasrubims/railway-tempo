@@ -23,15 +23,15 @@ Grafana Tempo is a high-performance, scalable, and easy-to-operate distributed t
 ## 👩‍💻 How to Use Grafana Tempo in Grafana
 
 1. Add Tempo as a Data Source:
-  * Open your Grafana instance, go to Configuration (gear icon) → Data Sources → Add data source.
-  * Search for “Tempo” and select it.
-  * Set the URL to http://railway-tempo:3200.
-  * Click Save & Test to verify the connection.
+   * Open your Grafana instance, go to Configuration (gear icon) → Data Sources → Add data source.
+   * Search for “Tempo” and select it.
+   * Set the URL to http://railway-tempo:3200.
+   * Click Save & Test to verify the connection.
 2. Query Traces:
-  * Go to the Explore tab (compass icon).
-  * Select the Tempo data source and explore your traces using the query editor.
+   * Go to the Explore tab (compass icon).
+   * Select the Tempo data source and explore your traces using the query editor.
 3. Visualize Service Dependencies:
-  * In Dashboards, create or import a dashboard, add a panel, and select Service Graph to visualize how services interact.
+   * In Dashboards, create or import a dashboard, add a panel, and select Service Graph to visualize how services interact.
 
 ## 🪲 Bug Reporting
 
