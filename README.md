@@ -1,6 +1,6 @@
 # Grafana Tempo for railway.app
 
-Deploy Grafana Tempo on railway with one click.
+Deploy Grafana Tempo on Railway with one click.
 Grafana Tempo is a high-performance, scalable, and easy-to-operate distributed tracing solution. It is designed to be compatible with the most popular tracing protocols and offers seamless integration with other tools in the Grafana ecosystem, enabling efficient visualization and analysis of distributed tracing data.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/qtu0ha?referralCode=9uHSFr)
@@ -15,25 +15,24 @@ Grafana Tempo is a high-performance, scalable, and easy-to-operate distributed t
 
 ## 🐍 How to Deploy
 
-1. Click Deploy on Railway
-2. Wait for Build & Deployment to Finish
-3. Access the custom URL and configure Tempo as a data source in Grafana
+1. Click Deploy on Railway.
+2. Wait for Build & Deployment to Finish.
+3. Access the custom URL for Grafana Tempo (available in your Railway dashboard).
+4. Follow the instructions below to configure Grafana and integrate with Tempo.
 
-## 👩‍💻 How to Use
+## 👩‍💻 How to Use Grafana Tempo in Grafana
 
-1. Configure Grafana to use your custom Tempo URL as the data source.
-2. Set up the necessary environment variables for authentication and configuration.
-3. Ensure your Grafana instance is compatible with Tempo (version 7.4 or above recommended).
-4. Use the Explore view in Grafana to query and visualize your traces from Tempo.
-5. Consider setting up service graphs and other Tempo-specific visualizations in Grafana.
+1. Add Tempo as a Data Source:
+  * Open your Grafana instance, go to Configuration (gear icon) → Data Sources → Add data source.
+  * Search for “Tempo” and select it.
+  * Set the URL to http://railway-tempo:3200.
+  * Click Save & Test to verify the connection.
+2. Query Traces:
+  * Go to the Explore tab (compass icon).
+  * Select the Tempo data source and explore your traces using the query editor.
+3. Visualize Service Dependencies:
+  * In Dashboards, create or import a dashboard, add a panel, and select Service Graph to visualize how services interact.
 
 ## 🪲 Bug Reporting
 
 If you find a bug in the template for railway, you can [submit an issue](https://github.com/douglasrubims/railway-tempo/issues/new) to the GitHub Repository. Even better you can submit a Pull Request with a fix. 
-
-## 🐳  Local Development
-
-```bash
-docker compose build
-docker compose up -d
-```
