@@ -1,10 +1,9 @@
-ARG VERSION=latest
-ARG PORT=3100
+FROM grafana/tempo:latest
 
-FROM grafana/tempo:${VERSION}
+EXPOSE 3200
 
-EXPOSE ${PORT}
+COPY ./tempo.yaml /etc/tempo.yaml
 
-COPY tempo.yml /etc/tempo/tempo.yml
+EXPOSE 3200 14268 14250 4317 4318
 
-CMD ["-config.file=/etc/tempo/tempo.yml"]
+CMD ["-config.file=/etc/tempo.yml"]

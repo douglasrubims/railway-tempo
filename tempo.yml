@@ -1,9 +1,9 @@
 server:
-  http_listen_port: 3100
+  http_listen_port: 3200
 
 compactor:
   compaction:
-    block_retention: 24h
+    compaction_window: 1h
 
 storage:
   trace:
@@ -12,9 +12,16 @@ storage:
       path: /var/tempo/traces
 
 distributor:
+  log_received_spans:
+        enabled: true
   receivers:
     jaeger:
       protocols:
         grpc:
-        thrift_compact:
+        thrift_http:
         thrift_binary:
+        thrift_compact:
+    otlp:
+      protocols:
+        grpc:
+        http:
